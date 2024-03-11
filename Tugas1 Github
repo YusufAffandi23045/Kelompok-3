@@ -1,0 +1,41 @@
+# Inisialisasi objek MiexueOrder sebagai program pemesanan Miexue.
+if __name__ == "__main__":
+    miexue_menu = MiexueOrder()
+# Menampilkan menu Miexue.
+print("\nPilih menu Miexue:")
+print("1. Miexue Ice Cream (5000 rupiah)")
+print("2. Boba Shake (16000 rupiah)")
+print("3. Mi Sundae (14000 rupiah)")
+print("4. Mi Ganas (11000 rupiah)")
+print("5. Creamy Mango Boba (22000 rupiah)")
+print("6. tampilkan pesanan")
+print("7. bayar")
+
+# Looping untuk memproses pilihan pengguna.
+while True:
+        
+        choice = input("Masukkan nomor menu: ")
+        if choice == "1":
+            miexue_menu.add_order("Miexue Ice Cream", 5000)
+            print("Miexue Ice Cream sudah ditambahkan ke keranjang")
+        elif choice == "2":
+            miexue_menu.add_order("Boba Shake", 16000)
+            print("Boba Shake sudah ditambahkan ke keranjang")
+        elif choice == "3":
+            miexue_menu.add_order("Mi Sundae", 14000)
+            print("Mi Sundae sudah ditambahkan ke keranjang")
+        elif choice == "4":
+            miexue_menu.add_order("Mi Ganas", 11000)
+            print("Mi Ganas sudah ditambahkan ke keranjang")
+        elif choice == "5":
+            miexue_menu.add_order("Creamy Mango Boba", 22000)
+            print("Creamy Mango Boba sudah ditambahkan ke keranjang")
+        elif choice == "6":
+            print("\nPesanan yang sudah ditambahkan:")
+            miexue_menu.display_orders()
+            print("\nmasukkan nomor 7 untuk pembayaran \nmasukkan nomor antara 1-5 untuk menambah pesanan\n")
+        elif choice == "7":
+            print(f"\nTotal biaya yang harus dibayarkan adalah {miexue_menu.calculate_total()} rupiah. \nTerima kasih sudah memesan!")
+            break
+        else:
+            print("Pilihan tidak valid. Silakan pilih nomor menu yang benar.")
