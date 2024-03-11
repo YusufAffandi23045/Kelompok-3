@@ -1,3 +1,21 @@
+# Fungsi untuk menampilkan pesanan yang telah ditambahkan.
+    def display_orders(self):
+        current = self.head
+        order_number = 1
+        while current:
+            print(f"{order_number}. {current.menu_name} {current.price} rupiah")
+            current = current.next
+            order_number += 1
+
+# Fungsi untuk menghitung total biaya pesanan.
+    def calculate_total(self):
+        total = 0
+        current = self.head
+        while current:
+            total += current.price
+            current = current.next
+        return total
+
 # Inisialisasi objek MiexueOrder sebagai program pemesanan Miexue.
 if __name__ == "__main__":
     miexue_menu = MiexueOrder()
